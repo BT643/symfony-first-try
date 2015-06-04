@@ -29,4 +29,14 @@ class DefaultController extends Controller
             'articles' => $articles,
         ));
     }
+
+    /**
+     * @Route("/hello/{name}", name="hello")
+     */
+    public function helloAction($name)
+    {
+        return $this->render('default/hello.html.twig', array(
+            'name' => $name
+        ));
+    }
 }
