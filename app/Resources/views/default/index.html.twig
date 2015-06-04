@@ -2,4 +2,13 @@
 
 {% block body %}
     Homepage.
+
+    <div>{{ user.name }}</div>
+
+    <h1>{{ user.name|reverse|capitalize }}</h1>
+
+    <p>{{ user.name|striptags|slice(0, 2) }}...</p>
+
+    <p>Activate your account before {{ 'next Monday'|date('M j, Y') }}</p>
+
 {% endblock %}
