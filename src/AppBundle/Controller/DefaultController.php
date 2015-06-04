@@ -17,4 +17,16 @@ class DefaultController extends Controller
             )
         );
     }
+
+    public function topArticlesAction()
+    {
+        $articles = array(
+            'Article1' => 'Exciting News Article 1',
+            'Article2' => 'Exciting News Article 2'
+        );
+
+        return $this->render('default/top_articles.html.twig', array(
+            'articles' => $articles,
+        ));
+    }
 }
