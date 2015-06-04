@@ -8,14 +8,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/app/example", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig', array(
+        /*return $this->render('default/index.html.twig', array(
                 'user' => array('name' => 'Ben')
             )
-        );
+        );*/
+
+        return $this->redirectToRoute('hello', array('name' => 'Ben'));
     }
 
     public function topArticlesAction()
